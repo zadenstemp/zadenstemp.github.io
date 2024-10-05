@@ -13,21 +13,24 @@ body {
     position: sticky;
     top: 0;
     z-index: 10;
-    display: flex;
-    justify-content: space-between; /* Space between the title and nav */
-    align-items: center;
+    text-align: center; /* Center the title */
+    position: relative; /* Relative positioning for the nav to be placed absolutely */
 }
 
 /* Title (The Zaden) */
 .top-bar h1 {
     margin: 0;
     font-size: 24px;
-    left: 40%;
+    position: relative;
+    z-index: 1; /* Ensure the title stays above the nav */
 }
 
 /* Navigation bar styling */
 nav {
-    margin-right: 20px; /* Right margin for spacing */
+    position: absolute;
+    right: 20px; /* Position it on the right */
+    top: 50%;
+    transform: translateY(-50%); /* Vertically center the nav in the header */
 }
 
 nav a {
