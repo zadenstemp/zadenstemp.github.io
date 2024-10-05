@@ -16,8 +16,8 @@ body {
     display: flex;
     justify-content: center; /* Center the title horizontally */
     align-items: center; /* Vertically center the content */
-    position: relative; /* Relative positioning for absolute nav */
     min-height: 40px; /* Adjusted min-height */
+    width: 100%; /* Ensure top bar takes full width */
 }
 
 /* Title link styling */
@@ -29,15 +29,12 @@ body {
     margin: 0;
     font-size: 24px;
     color: white; /* Ensure the title stays white */
-    z-index: 1; /* Ensure the title is above nav */
 }
 
 /* Navigation bar styling */
 nav {
     position: absolute;
     right: 20px; /* Position it on the right */
-    top: 50%; /* Center the nav vertically */
-    transform: translateY(-50%); /* Adjust nav to be vertically centered */
 }
 
 nav a {
@@ -98,5 +95,45 @@ nav a:hover {
     font-size: 18px;
     text-align: center;
     color: #333;
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 768px) {
+    /* Adjust blog container for tablet-sized screens */
+    .blog-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+        padding: 20px;
+    }
+
+    /* Adjust navigation font size */
+    nav a {
+        font-size: 16px;
+        margin: 0 10px;
+    }
+
+    /* Adjust blog entry title font size */
+    .blog-title {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjust blog container for small mobile screens */
+    .blog-container {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 20px;
+        padding: 15px;
+    }
+
+    /* Adjust navigation font size */
+    nav a {
+        font-size: 14px;
+        margin: 0 5px;
+    }
+
+    /* Adjust blog entry title font size */
+    .blog-title {
+        font-size: 14px;
+    }
 }
 
