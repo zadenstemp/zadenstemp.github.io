@@ -13,24 +13,26 @@ body {
     position: sticky;
     top: 0;
     z-index: 10;
-    text-align: center; /* Center the title */
-    position: relative; /* Relative positioning for the nav to be placed absolutely */
+    display: flex;
+    justify-content: center; /* Center the title */
+    align-items: center; /* Vertically center the content */
+    position: relative; /* Relative positioning for absolute nav */
 }
 
 /* Title (The Zaden) */
 .top-bar h1 {
     margin: 0;
     font-size: 24px;
-    position: relative;
-    z-index: 1; /* Ensure the title stays above the nav */
+    position: absolute; /* Absolute to stay centered */
+    left: 50%; /* Position centered horizontally */
+    transform: translateX(-50%); /* Offset by 50% to actually center */
+    z-index: 1; /* Ensure the title is above nav but doesn't block links */
 }
 
 /* Navigation bar styling */
 nav {
     position: absolute;
     right: 20px; /* Position it on the right */
-    top: 50%;
-    transform: translateY(-50%); /* Vertically center the nav in the header */
 }
 
 nav a {
