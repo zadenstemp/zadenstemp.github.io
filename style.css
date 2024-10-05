@@ -9,7 +9,7 @@ body {
 .top-bar {
     background-color: #111;
     color: #fff;
-    padding: 10px 0; /* Add padding to give space inside the header */
+    padding: 10px 0; /* Adjusted padding as per your changes */
     position: sticky;
     top: 0;
     z-index: 10;
@@ -17,7 +17,7 @@ body {
     justify-content: center; /* Center the title */
     align-items: center; /* Vertically center the content */
     position: relative; /* Relative positioning for absolute nav */
-    min-height: 40px; /* Ensure the header has a minimum height */
+    min-height: 40px; /* Adjusted min-height to match your preference */
 }
 
 /* Title link styling */
