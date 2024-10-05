@@ -19,10 +19,15 @@ body {
     position: relative; /* Relative positioning for absolute nav */
 }
 
-/* Title (The Zaden) */
-.top-bar h1 {
+/* Title link styling */
+.title-link {
+    text-decoration: none; /* Remove underline from the link */
+}
+
+.title-link h1 {
     margin: 0;
     font-size: 24px;
+    color: white; /* Ensure the title stays white */
     position: absolute; /* Absolute to stay centered */
     left: 50%; /* Position centered horizontally */
     transform: translateX(-50%); /* Offset by 50% to actually center */
