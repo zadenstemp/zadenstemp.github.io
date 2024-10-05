@@ -17,7 +17,7 @@ body {
     justify-content: center; /* Center the title */
     align-items: center; /* Vertically center the content */
     position: relative; /* Relative positioning for absolute nav */
-    min-height: 40px; /* Adjusted min-height to match your preference */
+    min-height: 50px; /* Adjusted min-height to match your preference */
 }
 
 /* Title link styling */
