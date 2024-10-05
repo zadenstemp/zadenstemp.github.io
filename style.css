@@ -17,39 +17,46 @@ body {
     justify-content: space-between; /* Distribute space between title and nav */
     align-items: center; /* Vertically center the content */
     min-height: 40px; /* Adjusted min-height */
-    width: 100%;
+    width: 100%; /* Ensure top bar takes full width */
+    box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 /* Title link styling */
 .title-link {
-    text-decoration: none; /* Remove underline from the link */
+    text-decoration: none;
+    flex-shrink: 1; /* Ensure the title doesn't grow uncontrollably */
 }
 
 .title-link h1 {
     margin: 0;
     font-size: 24px;
     color: white; /* Ensure the title stays white */
-    flex-grow: 1; /* Allow the title to take available space */
+    max-width: 60%; /* Ensure the title doesn't take up too much space */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow if the title is too long */
+    text-overflow: ellipsis; /* Show ellipsis if the title is cut off */
 }
 
 /* Navigation bar styling */
 nav {
     display: flex;
     gap: 15px; /* Add space between navigation links */
+    flex-shrink: 0; /* Prevent the navigation from shrinking */
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
 nav a:visited, nav a:active {
-    color: white; /* No color change on click */
+    color: white;
 }
 
 nav a:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline;
 }
 
 /* Blog container */
