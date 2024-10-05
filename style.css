@@ -24,9 +24,9 @@ body {
 /* Blog container */
 .blog-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 30px; /* Space between blog entries */
+    padding: 40px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -40,12 +40,12 @@ body {
     position: relative;
 }
 
-/* Dog-eared corner */
+/* Dog-eared corner (white to match background) */
 .blog-entry::before {
     content: '';
     width: 30px;
     height: 30px;
-    background-color: #111;
+    background-color: #fff;
     position: absolute;
     top: 0;
     right: 0;
@@ -65,3 +65,4 @@ body {
     text-align: center;
     color: #333;
 }
+
