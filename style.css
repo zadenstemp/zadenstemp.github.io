@@ -5,6 +5,22 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Style the navigation links in the top bar */
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
 /* Top bar styling */
 .top-bar {
     background-color: #111;
