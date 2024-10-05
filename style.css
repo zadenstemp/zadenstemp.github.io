@@ -9,15 +9,15 @@ body {
 .top-bar {
     background-color: #111;
     color: #fff;
-    padding: 10px 0; /* Adjusted padding as per your changes */
+    padding: 10px 0; /* Adjusted padding */
     position: sticky;
     top: 0;
     z-index: 10;
     display: flex;
-    justify-content: center; /* Center the title */
+    justify-content: center; /* Center the title horizontally */
     align-items: center; /* Vertically center the content */
     position: relative; /* Relative positioning for absolute nav */
-    min-height: 50px; /* Adjusted min-height to match your preference */
+    min-height: 40px; /* Adjusted min-height */
 }
 
 /* Title link styling */
@@ -29,16 +29,15 @@ body {
     margin: 0;
     font-size: 24px;
     color: white; /* Ensure the title stays white */
-    position: absolute; /* Absolute to stay centered */
-    left: 50%; /* Position centered horizontally */
-    transform: translateX(-50%); /* Offset by 50% to actually center */
-    z-index: 1; /* Ensure the title is above nav but doesn't block links */
+    z-index: 1; /* Ensure the title is above nav */
 }
 
 /* Navigation bar styling */
 nav {
     position: absolute;
     right: 20px; /* Position it on the right */
+    top: 50%; /* Center the nav vertically */
+    transform: translateY(-50%); /* Adjust nav to be vertically centered */
 }
 
 nav a {
@@ -100,3 +99,4 @@ nav a:hover {
     text-align: center;
     color: #333;
 }
+
