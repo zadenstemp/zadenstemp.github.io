@@ -9,15 +9,15 @@ body {
 .top-bar {
     background-color: #111;
     color: #fff;
-    padding: 10px 0; /* Adjusted padding */
+    padding: 10px 20px; /* Add padding to the sides for more space */
     position: sticky;
     top: 0;
     z-index: 10;
     display: flex;
-    justify-content: center; /* Center the title horizontally */
+    justify-content: space-between; /* Distribute space between title and nav */
     align-items: center; /* Vertically center the content */
     min-height: 40px; /* Adjusted min-height */
-    width: 100%; /* Ensure top bar takes full width */
+    width: 100%;
 }
 
 /* Title link styling */
@@ -29,18 +29,18 @@ body {
     margin: 0;
     font-size: 24px;
     color: white; /* Ensure the title stays white */
+    flex-grow: 1; /* Allow the title to take available space */
 }
 
 /* Navigation bar styling */
 nav {
-    position: absolute;
-    right: 20px; /* Position it on the right */
+    display: flex;
+    gap: 15px; /* Add space between navigation links */
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
     font-size: 18px;
 }
 
@@ -136,4 +136,3 @@ nav a:hover {
         font-size: 14px;
     }
 }
-
