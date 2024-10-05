@@ -5,9 +5,28 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Style the navigation links in the top bar */
+/* Top bar styling */
+.top-bar {
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between; /* Space between the title and nav */
+    align-items: center;
+}
+
+/* Title (The Zaden) */
+.top-bar h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Navigation bar styling */
 nav {
-    margin-top: 10px;
+    margin-right: 20px; /* Right margin for spacing */
 }
 
 nav a {
@@ -17,31 +36,19 @@ nav a {
     font-size: 18px;
 }
 
+nav a:visited, nav a:active {
+    color: white; /* No color change on click */
+}
+
 nav a:hover {
-    text-decoration: underline;
-}
-
-/* Top bar styling */
-.top-bar {
-    background-color: #111;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-
-.top-bar h1 {
-    margin: 0;
-    font-size: 24px;
+    text-decoration: underline; /* Underline on hover */
 }
 
 /* Blog container */
 .blog-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns */
-    gap: 30px; /* Space between blog entries */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
     padding: 40px;
     max-width: 1200px;
     margin: 0 auto;
@@ -81,4 +88,3 @@ nav a:hover {
     text-align: center;
     color: #333;
 }
-
