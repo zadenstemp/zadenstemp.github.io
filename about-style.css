@@ -57,6 +57,7 @@ nav a:hover {
 .about-content {
     text-align: center;
     padding: 40px;
+    width: 100%;
 }
 
 .about-content h2 {
@@ -82,4 +83,53 @@ nav a:hover {
     font-size: 16px;
     color: #555;
     border-top: 1px solid #ccc;
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 768px) {
+    .about-content {
+        padding: 20px;
+    }
+    
+    .about-content h2 {
+        font-size: 28px;
+    }
+
+    .about-content p {
+        font-size: 16px;
+        width: 90%; /* Shrink content width for smaller screens */
+    }
+
+    nav a {
+        font-size: 16px;
+        margin: 0 10px;
+    }
+
+    .email-section {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-content {
+        padding: 15px;
+    }
+    
+    .about-content h2 {
+        font-size: 24px;
+    }
+
+    .about-content p {
+        font-size: 14px;
+        width: 95%; /* Further reduce content width on very small screens */
+    }
+
+    nav a {
+        font-size: 14px;
+        margin: 0 5px;
+    }
+
+    .email-section {
+        font-size: 12px;
+    }
 }
