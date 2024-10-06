@@ -6,7 +6,7 @@
     <title>Article - The Zaden</title>
     <link rel="stylesheet" href="../style.css"> <!-- Link to the same stylesheet -->
     <style>
-             /* General styling for the article content */
+        /* General styling for the article content */
         .article-content {
             padding: 40px;
             max-width: 1200px;
@@ -53,9 +53,11 @@
             }
 
             .article-image {
-                width: 100%;
-                height: auto; /* Allow the image to adjust height automatically */
+                max-width: 100%; /* Image takes full width on mobile */
+                height: auto; /* Adjust the height automatically to maintain aspect ratio */
+                margin-bottom: 20px; /* Space between image and text */
             }
+        } }
         }
     </style>
 </head>
