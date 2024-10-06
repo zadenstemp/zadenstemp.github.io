@@ -44,6 +44,7 @@
     </div>
     
         <script>
+        // Function to handle the fade and redirection
         document.addEventListener('DOMContentLoaded', function() {
             const articleElement = document.getElementById('article-1');
             const homeContent = document.querySelector('#home-content');
@@ -67,6 +68,14 @@
                 });
             } else {
                 console.error("Article 1 element or home-content not found");
+            }
+        });
+
+        // Detect back navigation and reload the page to fix incomplete rendering
+        window.addEventListener('pageshow', function(event) {
+            if (event.persisted) {
+                // Page is loaded from cache, so reload to ensure it's fully loaded
+                window.location.reload();
             }
         });
     </script>
