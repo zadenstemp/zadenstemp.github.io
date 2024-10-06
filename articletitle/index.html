@@ -6,7 +6,7 @@
     <title>Article - The Zaden</title>
     <link rel="stylesheet" href="../style.css"> <!-- Link to the same stylesheet -->
     <style>
-           /* General styling for the article content */
+             /* General styling for the article content */
         .article-content {
             padding: 40px;
             max-width: 1200px;
@@ -21,23 +21,15 @@
         }
 
         .article-body {
-            display: block;
-            max-width: 800px; /* Restrict the width of the text */
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
         .article-text {
-            margin-top: 20px; /* Space between image and text */
-        }
-
-        /* Image styling for desktop */
-        .article-image {
-            width: 100%; /* Take full width of the container */
-            max-width: 800px; /* Constrain the image width */
-            height: 500px; /* Set the fixed height to 500px */
-            object-fit: cover; /* Ensure the image covers the full area without distortion */
-            margin: 0 auto; /* Center the image */
-            display: block;
+            flex-grow: 1;
         }
 
         .article-text p {
@@ -47,15 +39,22 @@
             text-align: justify;
         }
 
+        /* Image styling for desktop */
+        .article-image {
+            max-width: 40%; /* Image takes up 40% of the container width */
+            height: 500px; /* Fixed height */
+            object-fit: cover; /* Ensure the image covers the full area without distortion */
+        }
+
         /* Mobile-friendly adjustments */
         @media (max-width: 768px) {
             .article-body {
-                max-width: 100%;
+                flex-direction: column; /* Stack the text and image on mobile */
             }
 
             .article-image {
-                height: auto; /* Auto height for smaller screens */
-                max-width: 100%; /* Full width for smaller screens */
+                width: 100%;
+                height: auto; /* Allow the image to adjust height automatically */
             }
         }
     </style>
