@@ -85,15 +85,25 @@
         </div>
     </div>
         <script>
-        // Function to handle the fade and redirection
-        document.getElementById('article-1').addEventListener('click', function() {
-            // Add fade-out class
-            document.getElementById('home-content').classList.add('fade-out');
-            
-            // Redirect after the fade-out effect (1s)
-            setTimeout(function() {
-                window.location.href = 'articletitle/index.html'; // Redirect to article
-            }, 1000);
+     document.addEventListener('DOMContentLoaded', function() {
+            const articleElement = document.getElementById('article-1');
+            if (articleElement) {
+                console.log("Article 1 element found"); // Ensure the element is found
+
+                articleElement.addEventListener('click', function() {
+                    console.log("Article 1 clicked"); // Log the click event
+
+                    // Add fade-out class
+                    document.getElementById('home-content').classList.add('fade-out');
+                    
+                    // Redirect after the fade-out effect (1s)
+                    setTimeout(function() {
+                        window.location.href = 'articletitle/index.html'; // Redirect to article
+                    }, 1000);
+                });
+            } else {
+                console.error("Article 1 element not found"); // Log if the element is not found
+            }
         });
     </script>
 </body>
