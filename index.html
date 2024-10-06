@@ -21,11 +21,11 @@
     <!-- Blog Panel -->
     <div class="blog-container">
         <!-- Blog entries (8 samples) -->
-        <div class="blog-entry">
+         <div class="blog-entry" id="article-1">
             <div class="image-wrapper">
-                <img src="https://via.placeholder.com/400x200" alt="Placeholder" class="blog-image">
+                <img src="https://i.etsystatic.com/5295440/r/il/cc4687/2718466752/il_570xN.2718466752_ex0d.jpg" alt="Placeholder" class="blog-image">
             </div>
-            <h2 class="blog-title">Blog Post Title 1</h2>
+            <h2 class="blog-title">This Is a Sample Article</h2>
         </div>
         <div class="blog-entry">
             <div class="image-wrapper">
@@ -70,6 +70,18 @@
             <h2 class="blog-title">Blog Post Title 8</h2>
         </div>
     </div>
+        <script>
+        // Function to handle the fade and redirection
+        document.getElementById('article-1').addEventListener('click', function() {
+            // Add fade-out class
+            document.getElementById('home-content').classList.add('fade-out');
+            
+            // Redirect after the fade-out effect (1s)
+            setTimeout(function() {
+                window.location.href = 'articletitle/article.html'; // Redirect to article
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
 
