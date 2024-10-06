@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article - The Zaden</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the same stylesheet -->
+    <style>
+        /* Specific styles for the article content */
+        .article-content {
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .article-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .article-body {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .article-image {
+            max-width: 40%; /* Image takes 40% width */
+            height: auto;
+        }
+
+        .article-text {
+            flex-grow: 1;
+        }
+
+        .article-text p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: justify; /* Justify the text */
+        }
+
+        /* Mobile-friendly adjustments */
+        @media (max-width: 768px) {
+            .article-body {
+                flex-direction: column;
+            }
+
+            .article-image {
+                max-width: 100%;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top bar with navigation -->
+    <header class="top-bar">
+        <a href="index.html" class="title-link">
+            <h1>The Zaden</h1>
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Article Content -->
+    <section class="article-content">
+        <h2 class="article-title">The Fascinating World of Urban Gardens</h2>
+        <div class="article-body">
+            <!-- Text to the left -->
+            <div class="article-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur convallis urna vel orci viverra, ac tempor ligula volutpat. Nullam sollicitudin, lectus nec pharetra vehicula, ex libero efficitur risus, non interdum eros libero sit amet lacus. Integer eget odio nec augue aliquam accumsan at non risus. Vivamus sit amet quam at urna feugiat elementum.</p>
+
+                <p>Vestibulum eget elit facilisis, posuere nisl a, gravida leo. Cras dapibus, enim id vehicula tempus, felis sapien aliquam mi, ut tincidunt enim metus nec turpis. Quisque posuere est nec eros eleifend, quis vulputate lacus laoreet. Nulla a mauris nec libero bibendum feugiat non vel dolor. Pellentesque vehicula quam vel urna bibendum hendrerit.</p>
+
+                <p>Aenean ut gravida metus. Donec laoreet, lectus nec vestibulum tempor, sem est vehicula nunc, sed elementum purus risus vel arcu. Vivamus tincidunt dui at diam posuere, vel blandit lectus pretium. Sed non dolor vitae ex maximus gravida. Nulla facilisi. Ut et dolor sit amet turpis eleifend consequat sit amet vel turpis.</p>
+            </div>
+
+            <!-- Image to the right -->
+            <img src="https://via.placeholder.com/400x300" alt="Urban Garden" class="article-image">
+        </div>
+    </section>
+</body>
+</html>
