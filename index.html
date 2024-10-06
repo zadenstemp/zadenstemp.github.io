@@ -44,10 +44,12 @@
     </div>
     
         <script>
-       // Function to handle the fade and redirection
         document.addEventListener('DOMContentLoaded', function() {
             const articleElement = document.getElementById('article-1');
             const homeContent = document.querySelector('#home-content');
+
+            // Ensure fade-out is removed on page load (for back button navigation)
+            homeContent.classList.remove('fade-out');
 
             if (articleElement && homeContent) {
                 console.log("Article 1 element found");
