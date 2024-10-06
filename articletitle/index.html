@@ -6,7 +6,7 @@
     <title>Article - The Zaden</title>
     <link rel="stylesheet" href="../style.css"> <!-- Link to the same stylesheet -->
     <style>
-        /* Specific styles for the article content */
+         /* Specific styles for the article content */
         .article-content {
             padding: 40px;
             max-width: 1200px;
@@ -25,9 +25,12 @@
             gap: 20px;
         }
 
+        /* Image styling on non-mobile devices */
         .article-image {
-            max-width: 40%; /* Image takes 40% width */
-            height: auto;
+            max-width: 60%; /* Increased size on desktop */
+            height: 300px; /* Fixed height for consistency */
+            object-fit: cover; /* Ensures the image is resized and cropped to fit */
+            flex-shrink: 0; /* Prevent shrinking */
         }
 
         .article-text {
@@ -44,11 +47,12 @@
         /* Mobile-friendly adjustments */
         @media (max-width: 768px) {
             .article-body {
-                flex-direction: column-reverse; /* Image above the title on mobile */
+                flex-direction: column-reverse; /* Image above the text on mobile */
             }
 
             .article-image {
                 max-width: 100%;
+                height: auto; /* Auto height for responsive design */
                 margin-bottom: 20px;
             }
         }
