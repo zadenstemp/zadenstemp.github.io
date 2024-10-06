@@ -6,7 +6,7 @@
     <title>Article - The Zaden</title>
     <link rel="stylesheet" href="../style.css"> <!-- Link to the same stylesheet -->
     <style>
-        /* General styling for the article content */
+            /* General styling for the article content */
         .article-content {
             padding: 40px;
             max-width: 1200px;
@@ -30,6 +30,7 @@
 
         .article-text {
             flex-grow: 1;
+            order: 1; /* Ensure text appears first on desktop */
         }
 
         .article-text p {
@@ -44,6 +45,7 @@
             max-width: 40%; /* Image takes up 40% of the container width */
             height: 500px; /* Fixed height */
             object-fit: cover; /* Ensure the image covers the full area without distortion */
+            order: 2; /* Ensure image appears second (to the right of text) */
         }
 
         /* Mobile-friendly adjustments */
@@ -56,8 +58,8 @@
                 max-width: 100%; /* Image takes full width on mobile */
                 height: auto; /* Adjust the height automatically to maintain aspect ratio */
                 margin-bottom: 20px; /* Space between image and text */
+                order: -1; /* Show image above text on mobile */
             }
-        } }
         }
     </style>
 </head>
