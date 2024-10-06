@@ -6,7 +6,7 @@
     <title>Article - The Zaden</title>
     <link rel="stylesheet" href="../style.css"> <!-- Link to the same stylesheet -->
     <style>
-         /* Specific styles for the article content */
+           /* General styling for the article content */
         .article-content {
             padding: 40px;
             max-width: 1200px;
@@ -17,43 +17,45 @@
             font-size: 36px;
             font-weight: bold;
             margin-bottom: 20px;
+            text-align: center; /* Center the title */
         }
 
         .article-body {
-            display: flex;
-            align-items: flex-start;
-            gap: 20px;
-        }
-
-        /* Image styling on non-mobile devices */
-        .article-image {
-            max-width: 60%; /* Increased size on desktop */
-            height: 500px; /* Fixed height for consistency */
-            object-fit: cover; /* Ensures the image is resized and cropped to fit */
-            flex-shrink: 0; /* Prevent shrinking */
+            display: block;
+            max-width: 800px; /* Restrict the width of the text */
+            margin: 0 auto;
         }
 
         .article-text {
-            flex-grow: 1;
+            margin-top: 20px; /* Space between image and text */
+        }
+
+        /* Image styling for desktop */
+        .article-image {
+            width: 100%; /* Take full width of the container */
+            max-width: 800px; /* Constrain the image width */
+            height: 500px; /* Set the fixed height to 500px */
+            object-fit: cover; /* Ensure the image covers the full area without distortion */
+            margin: 0 auto; /* Center the image */
+            display: block;
         }
 
         .article-text p {
             font-size: 18px;
             line-height: 1.6;
             margin-bottom: 20px;
-            text-align: justify; /* Justify the text */
+            text-align: justify;
         }
 
         /* Mobile-friendly adjustments */
         @media (max-width: 768px) {
             .article-body {
-                flex-direction: column-reverse; /* Image above the text on mobile */
+                max-width: 100%;
             }
 
             .article-image {
-                max-width: 100%;
-                height: auto; /* Auto height for responsive design */
-                margin-bottom: 20px;
+                height: auto; /* Auto height for smaller screens */
+                max-width: 100%; /* Full width for smaller screens */
             }
         }
     </style>
@@ -74,6 +76,7 @@
     <section class="article-content">
         <h2 class="article-title">I am a test article!</h2>
         <div class="article-body">
+            <img src="../path-to-image/500.png" alt="Article Image" class="article-image">
             <!-- Text to the left -->
             <div class="article-text">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur convallis urna vel orci viverra, ac tempor ligula volutpat. Nullam sollicitudin, lectus nec pharetra vehicula, ex libero efficitur risus, non interdum eros libero sit amet lacus. Integer eget odio nec augue aliquam accumsan at non risus. Vivamus sit amet quam at urna feugiat elementum.</p>
@@ -83,8 +86,6 @@
                 <p>Aenean ut gravida metus. Donec laoreet, lectus nec vestibulum tempor, sem est vehicula nunc, sed elementum purus risus vel arcu. Vivamus tincidunt dui at diam posuere, vel blandit lectus pretium. Sed non dolor vitae ex maximus gravida. Nulla facilisi. Ut et dolor sit amet turpis eleifend consequat sit amet vel turpis.</p>
             </div>
 
-            <!-- Image to the right -->
-             <img src="https://via.placeholder.com/1000x800" alt="Urban Garden" class="article-image">
         </div>
     </section>
 </body>
