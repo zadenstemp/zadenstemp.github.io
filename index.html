@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Zaden</title>
     <link rel="stylesheet" href="style.css">
+        <style>
+        /* Add the fade-out effect */
+        .fade-out {
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+
+        /* Restrict and resize the thumbnail image */
+        .blog-image {
+            width: 100%;
+            height: 200px; /* Fixed height for the image */
+            object-fit: cover; /* Ensures the image is resized and cropped to fit */
+        }
+    </style>
 </head>
 <body>
     <!-- Top bar -->
