@@ -31,9 +31,12 @@ body {
 }
 
 .title-link h1 {
+    font-family: 'EB Garamond', serif; /* Use EB Garamond */
+    font-size: 36px;
+    font-weight: 700;
     margin: 0;
-    font-size: 24px;
-    color: white;
+    color: white; 
+    text-align: center;
 }
 
 /* Navigation bar styling */
