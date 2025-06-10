@@ -60,46 +60,50 @@
             </div>
             <h2 class="blog-title">Poem: To Those Who Wait</h2>
         </div>
+               <div class="blog-entry" id="article-2" style="cursor: pointer;"> 
+            <div class="image-wrapper">
+            </div>
+            <h2 class="blog-title">Misc: Photoshop Tree</h2>
+        </div>
     
     </div>
   
     
-        <script>
-        // Function to handle the fade and redirection
-        document.addEventListener('DOMContentLoaded', function() {
-            const articleElement = document.getElementById('article-1');
-            const homeContent = document.querySelector('#home-content');
+<script>
+ 
+    document.addEventListener('DOMContentLoaded', function() {
+        const homeContent = document.querySelector('#home-content');
 
-            // Ensure fade-out is removed on page load (for back button navigation)
-            homeContent.classList.remove('fade-out');
+      
+        homeContent.classList.remove('fade-out');
 
-            if (articleElement && homeContent) {
-                console.log("Article 1 element found");
+        const articles = [
+            { id: 'article-1', url: 'poetry/tothosewhowait.html' },
+            { id: 'article-2', url: 'misc/photoshoptree.html' }
+        ];
 
-                articleElement.addEventListener('click', function() {
-                    console.log("Article 1 clicked");
-
-                    // Add fade-out class
+        articles.forEach(article => {
+            const element = document.getElementById(article.id);
+            if (element) {
+                element.addEventListener('click', function() {
                     homeContent.classList.add('fade-out');
-                    
-                    // Redirect after the fade-out effect (1s)
-                    setTimeout(function() {
-                        window.location.href = 'poetry/tothosewhowait.html'; // Redirect to article
+                    setTimeout(() => {
+                        window.location.href = article.url;
                     }, 1000);
                 });
             } else {
-                console.error("Article 1 element or home-content not found");
+                console.error(`Element with ID ${article.id} not found`);
             }
         });
+    });
 
-        // Detect back navigation and reload the page to fix incomplete rendering
-        window.addEventListener('pageshow', function(event) {
-            if (event.persisted) {
-                // Page is loaded from cache, so reload to ensure it's fully loaded
-                window.location.reload();
-            }
-        });
-    </script>
+
+    window.addEventListener('pageshow', function(event) {
+        if (event.persisted) {
+            window.location.reload();
+        }
+    });
+</script>
 </body>
 </html>
 
