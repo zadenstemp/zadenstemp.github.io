@@ -1,16 +1,16 @@
-/* General body styling */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /*align-items: center;*/
     justify-content: flex-start;
     min-height: 100vh;
 }
 
-/* Top bar styling */
+
 .top-bar {
     background-color: #111;
     color: #fff;
@@ -25,13 +25,12 @@ body {
     min-height: 40px;
 }
 
-/* Title link styling */
 .title-link {
     text-decoration: none;
 }
 
 .title-link h1 {
-    font-family: 'EB Garamond', serif; /* Use EB Garamond */
+    font-family: 'EB Garamond', serif; 
     font-size: 36px;
     font-weight: 700;
     margin: 0;
@@ -39,7 +38,7 @@ body {
     text-align: center;
 }
 
-/* Navigation bar styling */
+
 nav {
     position: absolute;
     right: 20px;
@@ -56,7 +55,6 @@ nav a {
     text-decoration: underline;
 }*/
 
-/* About page content */
 .about-content {
     text-align: center;
     padding: 40px;
@@ -76,7 +74,7 @@ nav a {
     color: #333;
 }
 
-/* Email section */
+
 .email-section {
     margin-top: 40px;
     padding: 20px;
@@ -86,9 +84,7 @@ nav a {
     font-size: 16px;
     color: #555;
     border-top: 1px solid #ccc;
-}
 
-/* Mobile-friendly adjustments */
 @media (max-width: 768px) {
     .about-content {
         padding: 20px;
@@ -100,7 +96,7 @@ nav a {
 
     .about-content p {
         font-size: 16px;
-        width: 90%; /* Shrink content width for smaller screens */
+        width: 90%; 
     }
 
     nav a {
@@ -124,7 +120,7 @@ nav a {
 
     .about-content p {
         font-size: 14px;
-        width: 95%; /* Further reduce content width on very small screens */
+        width: 95%; 
     }
 
     nav a {
