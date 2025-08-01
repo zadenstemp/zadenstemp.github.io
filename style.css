@@ -1,35 +1,35 @@
-/* General body styling */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
 }
 
-/* Top bar styling */
+
 .top-bar {
     background-color: #111;
     color: #fff;
-    padding: 10px 20px; /* Add padding to the sides for more space */
+    padding: 10px 20px; 
     position: sticky;
     top: 0;
     z-index: 10;
     display: flex;
-    justify-content: center; /* Center the title and nav */
-    align-items: center; /* Vertically center the content */
-    min-height: 40px; /* Adjusted min-height */
+    justify-content: center; 
+    align-items: center; 
+    min-height: 40px; /
     width: 100%;
     box-sizing: border-box;
 }
 
-/* Title link styling */
+
 .title-link {
     text-decoration: none;
     flex-grow: 1;
-    text-align: center; /* Ensure the title is centered */
+    text-align: center; 
 }
 
 .title-link h1 {
-    font-family: 'EB Garamond', serif; /* Use EB Garamond */
+    font-family: 'EB Garamond', serif; 
     font-size: 36px;
     font-weight: 700;
     margin: 0;
@@ -38,30 +38,29 @@ body {
     white-space: nowrap;
 }
 
-/* Navigation bar styling */
 nav {
     position: absolute;
-    right: 20px; /* Keep nav links on the right */
+    right: 20px; 
     display: flex;
-    gap: 15px; /* Add space between navigation links */
+    gap: 15px; 
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-size: 18px;
-    white-space: nowrap; /* Prevent text wrapping */
+    white-space: nowrap; 
 }
 
 nav a:visited, nav a:active {
     color: white;
 }
 
-nav a:hover {
+/*nav a:hover {
     text-decoration: underline;
-}
+}*/
 
-/* Blog container */
+
 .blog-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -71,7 +70,7 @@ nav a:hover {
     margin: 0 auto;
 }
 
-/* Blog entry styling */
+
 .blog-entry {
     background-color: #fff;
     border-radius: 5px;
@@ -80,8 +79,8 @@ nav a:hover {
     position: relative;
 }
 
-/* Dog-eared corner (white to match background) */
-.blog-entry::before {
+
+/*.blog-entry::before {
     content: '';
     width: 30px;
     height: 30px;
@@ -90,15 +89,15 @@ nav a:hover {
     top: 0;
     right: 0;
     clip-path: polygon(100% 0, 100% 100%, 0 0);
-}
+}*/
 
-/* Blog image styling */
+
 .blog-image {
     width: 100%;
     height: auto;
 }
 
-/* Blog title styling */
+
 .blog-title {
     padding: 10px;
     font-size: 18px;
@@ -106,43 +105,42 @@ nav a:hover {
     color: #333;
 }
 
-/* Mobile-friendly adjustments */
 @media (max-width: 768px) {
-    /* Adjust blog container for tablet-sized screens */
+
     .blog-container {
-        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+        grid-template-columns: repeat(2, 1fr); 
         padding: 20px;
     }
 
-    /* Adjust navigation font size */
+
     nav a {
         font-size: 16px;
         margin: 0 10px;
     }
 
-    /* Adjust blog entry title font size */
+
     .blog-title {
         font-size: 16px;
     }
 }
 
 @media (max-width: 480px) {
-    /* Adjust blog container for small mobile screens */
+
     .blog-container {
-        grid-template-columns: 1fr; /* Single column on mobile */
+        grid-template-columns: 1fr; 
         gap: 20px;
         padding: 15px;
     }
 
-    /* Adjust navigation font size */
+
     nav a {
         font-size: 14px;
         margin: 0 5px;
     }
 
-    /* Adjust blog entry title font size */
     .blog-title {
         font-size: 14px;
     }
 }
+
 
