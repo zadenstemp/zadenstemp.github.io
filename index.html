@@ -70,7 +70,6 @@
         const homeContent = document.querySelector('#home-content');
 
       
-        homeContent.classList.remove('fade-out');
 
         const articles = [
             { id: 'article-1', url: 'poetry/tothosewhowait.html' },
@@ -81,10 +80,8 @@
         articles.forEach(article => {
             const element = document.getElementById(article.id);
             if (element) {
-                element.addEventListener('click', function() {
-                    setTimeout(() => {
+              element.addEventListener('click', function() {
                         window.location.href = article.url;
-                    }, 1000);
                 });
             } else {
                 console.error(`Element with ID ${article.id} not found`);
@@ -101,6 +98,7 @@
 </script>
 </body>
 </html>
+
 
 
 
