@@ -12,27 +12,19 @@
     
      <title>The Zaden</title>
 
-    <!-- Meta Description (Under 160 characters for better SEO) -->
-    <meta name="description" content="The Zaden, the website for a self-proclaimed polymath with way too much free time on his hands.">
+    <meta name="description" content="This is Zaden's website where he puts stuff he makes"
 
-    <!-- Meta Keywords (Include Relevant Keywords Related to "The Zaden") -->
-    <meta name="keywords" content="The Zaden, blog, homepage, zaden weiss, solo, solo dev, polymath, travel blog simulator">
+    <meta name="keywords" content="The Zaden, blog, homepage, zaden weiss">
 
     <!-- Open Graph Tags (Improves Social Sharing and Google Visibility) -->
     <meta property="og:title" content="The Zaden">
-    <meta property="og:description" content="The website for a self-proclaimed polymath with way too much free time on his hands.">
+    <meta property="og:description" content="This is Zaden's website where he puts stuff he makes.">
     <meta property="og:image" content="/image.png"> 
     <meta property="og:url" content="https://www.thezaden.com">
     <meta property="og:type" content="website">
         <link rel="canonical" href="https://www.thezaden.com">
     <link rel="stylesheet" href="style.css">
         <style>
-        /* Add the fade-out effect */
-        .fade-out {
-            opacity: 0;
-            transition: opacity 1s ease;
-        }
-
         /* Restrict and resize the thumbnail image */
         .blog-image {
             width: 100%;
@@ -68,7 +60,7 @@
                       <div class="blog-entry" id="article-3" style="cursor: pointer;"> 
             <div class="image-wrapper">
             </div>
-            <h2 class="blog-title">Cronome: Intro</h2>
+            <h2 class="blog-title">Worldbuilding Project: Intro</h2>
         </div>
     
     </div>
@@ -85,14 +77,13 @@
         const articles = [
             { id: 'article-1', url: 'poetry/tothosewhowait.html' },
             { id: 'article-2', url: 'misc/photoshoptree.html' },
-             { id: 'article-3', url: 'cronome/intro.html' }
+             { id: 'article-3', url: 'WBP/intro.html' }
         ];
 
         articles.forEach(article => {
             const element = document.getElementById(article.id);
             if (element) {
                 element.addEventListener('click', function() {
-                    homeContent.classList.add('fade-out');
                     setTimeout(() => {
                         window.location.href = article.url;
                     }, 1000);
@@ -112,4 +103,5 @@
 </script>
 </body>
 </html>
+
 
